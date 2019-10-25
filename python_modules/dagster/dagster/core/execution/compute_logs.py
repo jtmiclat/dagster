@@ -38,9 +38,10 @@ def mirror_step_io(step_context):
 
 
 def should_disable_io_stream_redirect():
+    print(sys.platform, os.name)
     # See https://stackoverflow.com/a/52377087
     return (
-        sys.platform.startswith('win')
+        os.name == 'nt'
         and sys.version_info.major == 3
         and sys.version_info.minor >= 6
         and not os.environ.get('PYTHONLEGACYWINDOWSSTDIO')
