@@ -38,7 +38,6 @@ def mirror_step_io(step_context):
 
 
 def should_disable_io_stream_redirect():
-    print(sys.platform, os.name)
     # See https://stackoverflow.com/a/52377087
     return (
         os.name == 'nt'
