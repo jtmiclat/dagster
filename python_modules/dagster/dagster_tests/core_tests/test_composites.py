@@ -347,7 +347,6 @@ def test_composite_config_driven_materialization():
         wrap_one()
 
     with get_temp_file_name() as write_location:
-        os.unlink(write_location)
         execute_pipeline(
             composite_config_driven_materialization_pipeline,
             environment_dict={
