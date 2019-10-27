@@ -3,24 +3,24 @@
 Pipelines
 =========
 
+Pipeline definitions
+--------------------
 .. autodecorator:: pipeline
 
 .. autoclass:: PipelineDefinition
 
+Dependencies and aliases
+------------------------
 .. autoclass:: DependencyDefinition
-    :members:
 
 .. autoclass:: SolidInvocation
-    :members:
 
 ----
-
 
 Modes
 =====
 
 .. autoclass:: ModeDefinition
-    :members:
 
 ----
 
@@ -43,9 +43,18 @@ Logging
 .. autodecorator:: logger
 
 .. autoclass:: LoggerDefinition
-    :members:
 
 .. autoclass:: InitLoggerContext
+
+.. autoclass:: DagsterLogManager
+    :members:
+
+----
+
+Presets
+=======
+
+.. autoclass:: PresetDefinition
     :members:
 
 ----
@@ -55,17 +64,14 @@ Executors
 .. autodecorator:: executor
 
 .. autoclass:: ExecutorDefinition
-   :members:
 
 .. autoclass:: InitExecutorContext
     :members:
 
-----
+.. autoclass:: ExecutorConfig
+    :members:
 
-Presets
-=======
-
-.. autoclass:: PresetDefinition
+.. autoclass:: Engine
     :members:
 
 ----

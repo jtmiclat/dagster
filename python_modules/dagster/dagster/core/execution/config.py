@@ -66,11 +66,18 @@ class RunConfig(
 class ExecutorConfig(six.with_metaclass(ABCMeta)):  # pylint: disable=no-init
     @abstractmethod
     def check_requirements(self, instance, system_storage_def):
-        '''(void): Whether this executor config is valid given the instance and system storage'''
+        '''Check whether this executor config is valid given the instance and system storage.
+
+        Args:
+            instance (DagsterInstance): The available Dagster instance.
+            system_storage_def (SystemStorageDefinition): The available system storage.
+        
+        Raises if the executor config is not valid.
+        '''
 
     @abstractmethod
     def get_engine(self):
-        '''(IEngine): Return the configured engine.'''
+        '''(Engine): Return the corresponding engine class.'''
 
 
 class InProcessExecutorConfig(ExecutorConfig):

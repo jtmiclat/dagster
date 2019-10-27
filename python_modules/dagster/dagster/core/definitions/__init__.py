@@ -20,6 +20,7 @@ from .events import (
     ExpectationResult,
     Failure,
     JsonMetadataEntryData,
+    MarkdownMetadataEntryData,
     Materialization,
     Output,
     PathMetadataEntryData,

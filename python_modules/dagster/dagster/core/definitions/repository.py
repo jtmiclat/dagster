@@ -9,7 +9,7 @@ class RepositoryDefinition(object):
 
     Args:
         name (str): The name of the pipeline.
-        pipeline_dict (Dict[str, callable]):
+        pipeline_dict (Dict[str, Callable[[], PipelineDefinition]]):
             An dictionary of pipelines. The value of the dictionary is a function that takes
             no parameters and returns a PipelineDefiniton.
 

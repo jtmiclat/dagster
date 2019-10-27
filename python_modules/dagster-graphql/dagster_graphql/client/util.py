@@ -76,7 +76,7 @@ def event_metadata_entries(metadata_entry_datas):
             yield EventMetadataEntry.md(
                 label=label,
                 description=description,
-                mdString=metadata_entry_data.get('mdString', ''),
+                md_str=metadata_entry_data.get('md_str', ''),
             )
         elif typename == 'EventTextMetadataEntry':
             yield EventMetadataEntry.text(

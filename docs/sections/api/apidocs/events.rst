@@ -3,8 +3,11 @@
 Events
 ======
 
-The types of objects that can be yielded during Solid compute functions to communicate
-rich information to Dagster.
+The objects that can be yielded by the body of solids' compute functions to communicate with the
+Dagster framework.
+
+Event types
+-----------
 
 .. autoclass:: Output
     :members:
@@ -23,20 +26,26 @@ rich information to Dagster.
 
 -------
 
-Metadata
---------
+Metadata entries
+----------------
+
+Dagster uses lists of metadata entries to communicate arbitrary user-specified metadata about
+structured events.
 
 .. autoclass:: EventMetadataEntry
+    :members:
+
+.. autoclass:: JsonMetadataEntryData
+    :members:
+
+.. autoclass:: MarkdownMetadataEntryData
+    :members:
+
+.. autoclass:: PathMetadataEntryData
     :members:
 
 .. autoclass:: TextMetadataEntryData
     :members:
 
 .. autoclass:: UrlMetadataEntryData
-    :members:
-
-.. autoclass:: PathMetadataEntryData
-    :members:
-
-.. autoclass:: JsonMetadataEntryData
     :members:

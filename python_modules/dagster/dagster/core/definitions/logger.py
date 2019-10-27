@@ -40,8 +40,10 @@ class LoggerDefinition(object):
 
 
 def logger(config=None, config_field=None, description=None):
-    '''A decorator for creating a logger. The decorated function will be used as the
-    logger_fn in a LoggerDefinition.
+    '''Define a logger.
+    
+    The decorated function should accept an :py:class:`InitLoggerContext` and return an instance of
+    :py:class:`python:logging.Logger`.
 
     Args:
         config (Dict[str, Field]):
